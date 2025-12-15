@@ -17,21 +17,37 @@ Desarrollar una aplicación móvil funcional que:
 Estructura del proyecto
 utask/
 ├── config.xml\
+
 ├── package.json\
+
 ├── google-services.json (ignorado por seguridad)\
-├── www/
+
+├── www/\
+
 │   ├── index.html\
+
 │   ├── css/\
+
 │   │   └── app.css\
+
 │   ├── js/\
+
 │   │   ├── firebase-config.js\
+
 │   │   ├── auth.js\
+
 │   │   ├── ui.js\
+
 │   │   ├── tasks-service.js\
+
 │   │   ├── push.js\
+
 │   │   └── index.js\
+
 ├── platforms/\
+
 ├── plugins/\
+
 └── README.md\
 
 Funcionalidades principales
