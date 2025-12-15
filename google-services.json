@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "497805271216",
+    "project_id": "utask-911a0",
+    "storage_bucket": "utask-911a0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497805271216:android:0ddca320bcdcac6ce21b75",
+        "android_client_info": {
+          "package_name": "com.miempresa.utask"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD76a5Px2r6uRtRNifAMcP4xFhMLABNm3s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
