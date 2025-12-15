@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>U-Task</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div id="app">
+
+    <section id="view-login" class="view">
+      <div class="card center-card">
+        <h1>U-Task</h1>
+        <input id="email" placeholder="Correo electrónico" type="email" />
+        <input id="password" placeholder="Contraseña" type="password" />
+        <button id="btnLogin" class="btn primary">Ingresar</button>
+        <button id="btnRegister" class="btn outline">Crear cuenta</button>
+      </div>
+    </section>
+
+    <section id="view-home" class="view" style="display:none">
+      <header class="app-header">
+        <h2>Mis tareas</h2>
+        <button id="btnLogoutTop" class="btn small">Salir</button>
+      </header>
+
+      <main class="content">
+        <div class="filters">
+          <select id="filterStatus">
+            <option value="all">Todas</option>
+            <option value="todo">Por hacer</option>
+            <option value="inprogress">En progreso</option>
+            <option value="done">Completadas</option>
+          </select>
+          <select id="filterPriority">
+            <option value="all">Todas prioridades</option>
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+          </select>
+        </div>
+
+        <ul id="tasksList" class="tasks-list"></ul>
+      </main>
+
+      <nav class="bottom-nav">
+        <button id="nav-home" class="nav-btn active">Tareas</button>
+        <button id="nav-add" class="nav-btn">Agregar</button>
+        <button id="nav-profile" class="nav-btn">Mi cuenta</button>
+      </nav>
+    </section>
+
+    <section id="view-profile" class="view" style="display:none">
+      <header class="app-header">
+        <h2>Mi cuenta</h2>
+        <button id="btnLogout" class="btn small">Salir</button>
+      </header>
+      <main class="content">
+        <div id="profileInfo" class="card">
+          <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+          <p><strong>UID:</strong> <span id="profileUid"></span></p>
+        </div>
+      </main>
+      <nav class="bottom-nav">
+        <button id="nav-home2" class="nav-btn">Tareas</button>
+        <button id="nav-add2" class="nav-btn">Agregar</button>
+        <button id="nav-profile2" class="nav-btn active">Mi cuenta</button>
+      </nav>
+    </section>
+
+    <div id="addModal" class="modal" aria-hidden="true">
+      <div class="modal-content card">
+        <h3>Crear tarea</h3>
+        <label>Título</label>
+        <input id="taskTitle" placeholder="Título de la tarea" />
+        <label>Descripción</label>
+        <textarea id="taskDesc" placeholder="Descripción"></textarea>
+        <label>Fecha límite</label>
+        <input id="taskDueDate" type="date" />
+        <label>Prioridad</label>
+        <select id="taskPriority">
+          <option value="baja">Baja</option>
+          <option value="media">Media</option>
+          <option value="alta">Alta</option>
+        </select>
+
+        <label>Asignar a</label>
+        <div id="membersList" class="members-list">
+
+        </div>
+
+        <div class="row">
+          <button id="btnCreateTask" class="btn primary">Crear</button>
+          <button id="btnCancelCreate" class="btn outline">Cancelar</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+  <script src="js/firebase-config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/tasks-service.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/push.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
+
+
