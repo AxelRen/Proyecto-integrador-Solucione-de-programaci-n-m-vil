@@ -15,7 +15,7 @@ Desarrollar una aplicación móvil funcional que:
 - Sea evaluable mediante código fuente, APK y evidencias visuales.
 
 Estructura del proyecto
-utask/
+utask/\
 ├── config.xml\
 ├── package.json\
 ├── google-services.json (ignorado por seguridad)\
